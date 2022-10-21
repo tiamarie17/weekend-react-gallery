@@ -1,10 +1,21 @@
 import React from 'react';
 import './App.css';
-import axios from 'react';
-import {useState, useEffect} from 'react';
+import axios from 'axios';
+import React, {useState, useEffect} from 'react';
 import GalleryList from '../GalleryList/GalleryList';
 
 function App() {
+
+    //Declaring gallery list array
+    let [galleryList, setGalleryList] = useState([]);
+
+    //On page load, get gallery list
+    useEffect(()=>{
+      //Call getGalleryItems function
+    }, [])
+
+    
+
     return (
       <div className="App">
         <header className="App-header">
