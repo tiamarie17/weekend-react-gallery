@@ -11,10 +11,25 @@ function App() {
 
     //On page load, get gallery list
     useEffect(()=>{
-      //Call getGalleryItems function
+      getGallery();
     }, [])
 
-    
+    const getGallery = () => {
+        axios.get('/gallery')
+
+        .then(response => {
+          setGalleryList(response.data)
+          
+          console.log(response.data);
+      })
+      .catch(err => {
+          console.log('error in GetGallery client', err);
+      })
+
+        
+    }
+
+
 
     return (
       <div className="App">
