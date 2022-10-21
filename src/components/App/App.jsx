@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
@@ -15,6 +14,7 @@ function App() {
     }, [])
 
     const getGallery = () => {
+        console.log('in GET /gallery client');
         axios.get('/gallery')
 
         .then(response => {
