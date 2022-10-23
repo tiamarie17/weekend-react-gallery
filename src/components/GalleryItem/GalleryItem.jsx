@@ -23,18 +23,19 @@ function GalleryItem({image, loveItBtn, active, handleChangeActive}){
    
             <div className = "flex-box">
             <img onClick = {() => handleChangeActive(id)} src = {image.path} />
-            <button className="likeBtn" onClick={() => loveItBtn(id)} >Love it!</button>
+            <button className="likeBtn" onClick={() => loveItBtn(id)} >Like <img className = "heart" src="/images/heart.png"/></button>
+            
             {likes === 1 ? (
                  <>
                  <div className ="likeCountText">
-                 <h3>{likes} person loves it!</h3> 
+                 <h3>{likes} person likes it!</h3> 
                  </div>
                  </>
 
             ) : (
                 <>
                 <div className = "likeCountText">
-                <h3>{likes} people love it!</h3> 
+                <h3>{likes} people like it!</h3> 
                 </div>
                 </> 
             )}
