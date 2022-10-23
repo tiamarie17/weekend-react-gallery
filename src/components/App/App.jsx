@@ -9,20 +9,26 @@ function App() {
     //Declaring gallery list array
     let [galleryList, setGalleryList] = useState([]);
 
-    //Declaring toggle variable
-    const [active, setActive] = useState(false);
+    //Declaring toggle variable and setting it to an empty array
+    const [active, setActive] = useState([]);
 
-    //Creating toggle click function
-    const handleChangeActive = () => {
-      setActive((previousImage) => {
-        return !previousImage
-      });
-    }
+    //Declaring a variable to track changeds in the active array, setting it to boolean value
+    const [updateActive, setupdateActive] = useState(true);
+
 
     //On page load, get gallery list
     useEffect(()=>{
       getGallery();
     }, [])
+
+      //Creating toggle click function
+      const handleChangeActive = (id) => {
+        console.log('in handleChangeActive function');
+      active[id] = !active[id];
+      setActive(active);
+      setupdateActive(!updateActive);
+
+    }
 
     //GET request to get gallery images array from the database
     const getGallery = () => {
