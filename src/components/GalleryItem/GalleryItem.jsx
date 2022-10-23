@@ -16,7 +16,7 @@ function GalleryItem({image, loveItBtn, active, handleChangeActive}){
    
     ) : (
    
-            <div className = "images">
+            <div className = "item">
             <img onClick = {() => handleChangeActive(id)} src = {image.path} />
             <button onClick={() => loveItBtn(id)}>Love it!</button>
             <h3>{image.likes} people love it!</h3> 

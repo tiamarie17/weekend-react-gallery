@@ -7,7 +7,7 @@ function GalleryList({galleryList, updateLikes, active, handleChangeActive}){
         <h2>Gallery Images</h2>
 
        
-        <div>
+        <div className = "flex-container">
             
             {galleryList.map(image => (
             <div key={image.id} className = "images">
