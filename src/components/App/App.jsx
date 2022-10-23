@@ -8,15 +8,24 @@ function App() {
 
     //Declaring gallery list array
     let [galleryList, setGalleryList] = useState([]);
+
+     //Declaring variable to track changes in the array using a boolean value
     const [activeUpdated, setActiveUpdated]= useState(true)
-    //Declaring toggle variable
+
+    //Declaring toggle variable as an empty array
     const [active, setActive] = useState([]);
     console.log(active)
+
     //Creating toggle click function
+    //Updating the boolean value of active variable at the id clicked
+    //using setActive to update the active array with new boolean values
+    //Source: https://marysallent.medium.com/how-to-toggle-images-icons-using-react-hooks-for-beginners-by-a-beginner-e4b8459f1ce4
     const handleChangeActive = (id) => {
       active[id] = !active[id] 
       setActive(active)
       console.log(active)
+      
+      //Using another useState to track changes in the array so it will render it again
       setActiveUpdated(!activeUpdated)
     }
 
