@@ -14,8 +14,8 @@ function GalleryItem({image, loveItBtn, active, handleChangeActive}){
     
        <>
        <div className= "flex-box">
-       <div className = "description" onClick = {() => handleChangeActive(id)}></div>
-        <h3>{description}</h3>
+       <div className = "description" onClick = {() => handleChangeActive(id)}>
+        <h3>{description}</h3></div>
         </div>
         </>
    
