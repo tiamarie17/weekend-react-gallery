@@ -1,20 +1,25 @@
 import GalleryItem from '../GalleryItem/GalleryItem';
 
-function GalleryList({galleryList}){
+function GalleryList({active, galleryList, updateLikes, handleChangeActive}){
     console.log('galleryList is', galleryList);
     return (
         <>
         <h2>Gallery Images</h2>
-        
+
+       
         <div>
             
             {galleryList.map(image => (
             <div key={image.id} className = "photo">
-            <GalleryItem image = {image} />
+            {/* Passing in image object and updateLikes function  */}
+            <GalleryItem image = {image} id = {image.id} loveItBtn={updateLikes}  />
             </div>
 
             ))}
         </div>
+      
+
+          
       
        
         </>

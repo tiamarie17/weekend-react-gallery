@@ -9,6 +9,16 @@ function App() {
     //Declaring gallery list array
     let [galleryList, setGalleryList] = useState([]);
 
+    //Declaring toggle variable
+    const [active, setActive] = useState(false);
+
+    //Creating toggle click function
+    const handleChangeActive = () => {
+      setActive((previousImage) => {
+        return !previousImage
+      });
+    }
+
     //On page load, get gallery list
     useEffect(()=>{
       getGallery();
@@ -32,11 +42,10 @@ function App() {
     }
 
     //PUT request to update the number of likes on an image
-
     const updateLikes = (id) => {
         console.log('in PUT gallery/like/:id client');
 
-        axios.put('/gallery/like/:id')
+        axios.put(`/gallery/like/${id}`)
 
             .then(response => {
                 console.log(response.data);
@@ -55,7 +64,7 @@ function App() {
     return (
       <div className="App">
         <Header />
-        <GalleryList galleryList = {galleryList} />
+        <GalleryList galleryList = {galleryList} updateLikes = {updateLikes} handleChangeActive = {handleChangeActive} active = {active} />
       </div>
     );
 }
