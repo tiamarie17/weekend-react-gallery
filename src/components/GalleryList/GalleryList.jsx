@@ -10,9 +10,11 @@ function GalleryList({galleryList, updateLikes, active, handleChangeActive}){
         <div>
             
             {galleryList.map(image => (
-            <div key={image.id} className = "photo">
-            {/* Passing in image object and updateLikes function  */}
-            <GalleryItem image = {image} loveItBtn={updateLikes} active={active} handleChangeActive={handleChangeActive}/>
+            <div key={image.id} className = "images">
+            {/* Passing in image object, handleChangeActive function, active array and updateLikes function  */}
+
+            <GalleryItem image = {image} loveItBtn={updateLikes} handleChangeActive={handleChangeActive} active ={active}  />
+
             </div>
 
             ))}

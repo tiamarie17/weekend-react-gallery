@@ -16,6 +16,13 @@ function App() {
     const [active, setActive] = useState([]);
     console.log(active)
 
+
+    //On page load, get gallery list
+    useEffect(()=>{
+      getGallery();
+    }, [])
+
+
     //Creating toggle click function
     //Updating the boolean value of active variable at the id clicked
     //using setActive to update the active array with new boolean values
@@ -23,16 +30,9 @@ function App() {
     const handleChangeActive = (id) => {
       active[id] = !active[id] 
       setActive(active)
-      console.log(active)
-      
       //Using another useState to track changes in the array so it will render it again
       setActiveUpdated(!activeUpdated)
     }
-
-    //On page load, get gallery list
-    useEffect(()=>{
-      getGallery();
-    }, [])
 
     //GET request to get gallery images array from the database
     const getGallery = () => {
