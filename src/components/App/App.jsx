@@ -8,13 +8,16 @@ function App() {
 
     //Declaring gallery list array
     let [galleryList, setGalleryList] = useState([]);
-
+    const [activeUpdated, setActiveUpdated]= useState(true)
     //Declaring toggle variable
-    const [active, setActive] = useState(false);
-
+    const [active, setActive] = useState([]);
+    console.log(active)
     //Creating toggle click function
-    const handleChangeActive = () => {
-      setActive(!active)
+    const handleChangeActive = (id) => {
+      active[id] = !active[id] 
+      setActive(active)
+      console.log(active)
+      setActiveUpdated(!activeUpdated)
     }
 
     //On page load, get gallery list
