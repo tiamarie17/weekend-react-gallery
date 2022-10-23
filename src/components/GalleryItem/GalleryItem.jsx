@@ -12,8 +12,11 @@ function GalleryItem({image, loveItBtn, active, handleChangeActive}){
 
     {active[id] ? (
     
-       
+       <>
+       <div className = "description">
         <h3 onClick = {() => handleChangeActive(id)}>{description}</h3>
+        </div>
+        </>
    
     ) : (
    

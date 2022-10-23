@@ -1,12 +1,19 @@
+/* Importing fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato');
+
 .App {
   text-align: center;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #8FBC8F;
   padding: 1em;
   color: white;
   margin-bottom: 1em;
+  font-size: 25px;
 }
 
 .App-title {
@@ -18,11 +25,13 @@
   flex-wrap: wrap;
   margin: 0 auto;
   justify-content: center;
-  width: 50em;
+  width: 60em;
 }
 
 .pointer {
   cursor: pointer;
+  font-size: 14px;
+  padding: 5px;
 }
 
 .likeCountText {
@@ -36,7 +45,25 @@
   padding: 3em;
 }
 
+img {
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid;
+  width: 300px;
+  height: 300px;
+}
 
+.description {
+  width: auto;
+  height: auto;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 3em;
+}
 
 
 

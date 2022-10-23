@@ -4,8 +4,6 @@ function GalleryList({galleryList, updateLikes, active, handleChangeActive}){
     console.log('galleryList is', galleryList);
     return (
         <>
-        <h2>Gallery Images</h2>
-
        
         <div className = "flex-container">
             
