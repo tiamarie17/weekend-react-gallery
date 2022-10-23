@@ -25,6 +25,20 @@
   cursor: pointer;
 }
 
+.likeCountText {
+  text-align: center;
+}
+
+.flex-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 3em;
+}
+
+
+
+
 
 
 
