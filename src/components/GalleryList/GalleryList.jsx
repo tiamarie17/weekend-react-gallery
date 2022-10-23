@@ -1,6 +1,6 @@
 import GalleryItem from '../GalleryItem/GalleryItem';
 
-function GalleryList({active, galleryList, updateLikes, handleChangeActive}){
+function GalleryList({galleryList, updateLikes, active, handleChangeActive}){
     console.log('galleryList is', galleryList);
     return (
         <>
@@ -12,7 +12,7 @@ function GalleryList({active, galleryList, updateLikes, handleChangeActive}){
             {galleryList.map(image => (
             <div key={image.id} className = "photo">
             {/* Passing in image object and updateLikes function  */}
-            <GalleryItem image = {image} id = {image.id} loveItBtn={updateLikes}  />
+            <GalleryItem image = {image} id = {image.id} loveItBtn={updateLikes} active={active} handleChangeActive={handleChangeActive}/>
             </div>
 
             ))}

@@ -14,9 +14,7 @@ function App() {
 
     //Creating toggle click function
     const handleChangeActive = () => {
-      setActive((previousImage) => {
-        return !previousImage
-      });
+      setActive(!active)
     }
 
     //On page load, get gallery list
@@ -64,7 +62,7 @@ function App() {
     return (
       <div className="App">
         <Header />
-        <GalleryList galleryList = {galleryList} updateLikes = {updateLikes} handleChangeActive = {handleChangeActive} active = {active} />
+        <GalleryList galleryList = {galleryList} updateLikes = {updateLikes} active={active} handleChangeActive={handleChangeActive}/>
       </div>
     );
 }
