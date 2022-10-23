@@ -14,6 +14,7 @@ function App() {
       getGallery();
     }, [])
 
+    //GET request to get gallery images array from the database
     const getGallery = () => {
         console.log('in GET /gallery client');
         axios.get('/gallery')
@@ -29,6 +30,25 @@ function App() {
 
         
     }
+
+    //PUT request to update the number of likes on an image
+
+    const updateLikes = (id) => {
+        console.log('in PUT gallery/like/:id client');
+
+        axios.put('/gallery/like/:id')
+
+            .then(response => {
+                console.log(response.data);
+                //Calling getGallery function to render updated gallery array
+                getGallery();
+            })
+
+            .catch(err => {
+
+                console.log('error in PUT rerquest', err);
+            })
+  }
 
 
 
