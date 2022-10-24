@@ -39,6 +39,8 @@
 .likeBtn, .deleteBtn {
   border: none;
   background-color: #FFF5EE;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .likeBtn:hover {
