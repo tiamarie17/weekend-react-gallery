@@ -23,10 +23,12 @@ const handleSubmit = (evt) => {
     //render inputs to the DOM
     return (
         <>
+            <h2>Add an Image:</h2>
             <form onSubmit = {handleSubmit}>
                 <div>
                     {/* Input item description */}
                     <input 
+                        required
                         type = "text"
                         placeholder='Description'
                         onChange={(evt)=> setNewDescription(evt.target.value)}
@@ -36,6 +38,7 @@ const handleSubmit = (evt) => {
                 <div>
                     {/* Input item URL */}
                     <input 
+                        required
                         type = "text"
                         placeholder='Type URL here'
                         onChange={(evt)=> setNewPath(evt.target.value)}
@@ -43,7 +46,7 @@ const handleSubmit = (evt) => {
                         />
             
                 {/* Submit button on form  */}
-                <button type = "submit">Add</button>
+                <button type = "submit" className = "addBtn">Add</button>
                 </div>
 
             </form>

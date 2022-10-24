@@ -87,6 +87,42 @@ img, .description {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
 }
 
+form {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+input {
+  height: 2em;
+  width: 18em;
+  font-size: 14px;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  border-radius: 8px;
+  margin-left: 1em;
+  margin-right: 1em;
+  
+}
+
+.addBtn {
+  height: 2em;
+  width: 4em;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+}
+
+.addBtn:hover {
+  background-color: #FFFACD;
+  cursor: pointer;
+}
+
+.addBtn:active {
+  background-color: #FFFACD;
+  cursor: pointer;
+}
+
 
 
 
