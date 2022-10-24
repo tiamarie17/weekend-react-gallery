@@ -7,6 +7,8 @@ function GalleryForm({addImage}) {
 const [newDescription, setNewDescription]  = useState('');
 const [newPath, setNewPath] = useState('');
 
+
+
 //Prevent reload on form submit and wrap inputs into a new object
 const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -19,7 +21,13 @@ const handleSubmit = (evt) => {
 
     //add new object to the gallery
     addImage(newImage);
+
+    //Clearing inputs
+    setNewDescription('');
+    setNewPath('');
 }
+
+
     //render inputs to the DOM
     return (
         <>
@@ -49,9 +57,11 @@ const handleSubmit = (evt) => {
                 <button type = "submit" className = "addBtn">Add</button>
                 </div>
 
-            </form>
+            </form>  
+          
         </>
     );
+
 }
 
 export default GalleryForm;
