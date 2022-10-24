@@ -36,7 +36,7 @@
 
 }
 
-.likeBtn {
+.likeBtn, .deleteBtn {
   border: none;
   background-color: #FFF5EE;
 }
@@ -49,17 +49,29 @@
   font-weight: bolder;
 }
 
+.deleteBtn:hover {
+  font-weight: bolder;
+  color: red;
+}
+
+.deleteBtn:active {
+  font-weight: bolder;
+  color: red;
+}
+
 
 .likeCountText {
   text-align: center;
 }
 
-.heart {
+.heart, .deleteIcon {
   width: 20px;
   height: 20px;
   border: none;
   margin: 0 auto;
 }
+
+
 
 .flex-box {
   display: flex;
@@ -123,6 +135,7 @@ input {
   background-color: #FFFACD;
   cursor: pointer;
 }
+
 
 
 

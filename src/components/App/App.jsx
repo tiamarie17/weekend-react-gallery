@@ -121,7 +121,7 @@ function App() {
       <div className="App">
         <Header />
         <GalleryForm addImage = {addImage}/>
-        <GalleryList galleryList = {galleryList} updateLikes = {updateLikes} active={active} handleChangeActive={handleChangeActive}/>
+        <GalleryList galleryList = {galleryList} updateLikes = {updateLikes} active={active} handleChangeActive={handleChangeActive} deleteImage={deleteImage}/>
       </div>
     );
 }

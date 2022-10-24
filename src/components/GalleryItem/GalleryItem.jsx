@@ -1,11 +1,11 @@
 
-function GalleryItem({image, loveItBtn, active, handleChangeActive}){
+function GalleryItem({image, loveItBtn, active, handleChangeActive, deleteBtn}){
     
     let description = image.description;
     let id = image.id;
     let likes = image.likes;
 
-    //Using a ternary operator to render either description or images on toggle
+    //Using a ternary operator to render either an image description or the images with like and delete buttons (on toggle)
 
     return (
         <>
@@ -24,6 +24,7 @@ function GalleryItem({image, loveItBtn, active, handleChangeActive}){
             <div className = "flex-box">
             <img onClick = {() => handleChangeActive(id)} src = {image.path} />
             <button className="likeBtn" onClick={() => loveItBtn(id)} >Like <img className = "heart" src="/images/heart.png"/></button>
+            <button className = "deleteBtn" onClick={()=> deleteBtn(id)} type="click">Remove <img className="deleteIcon" src="images/delete.png"/></button>
             
             {likes === 1 ? (
                  <>
