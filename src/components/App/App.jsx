@@ -3,6 +3,7 @@ import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import GalleryList from '../GalleryList/GalleryList';
 import Header from '../Header/Header';
+import GalleryForm from '../GalleryForm/GalleryForm';
 
 function App() {
 
