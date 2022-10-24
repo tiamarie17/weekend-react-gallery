@@ -98,6 +98,26 @@ function App() {
   //DELETE request to delete an image when clicked on using its id
 
       const deleteImage = (id) => {
+          console.log('in deleteImage');
+
+          //Sweetalert
+          swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this image!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+              swal("Poof! Your image has been deleted!", {
+                icon: "success",
+              });
+            } else {
+              swal("Your image is safe!");
+            }
+          });
+
         axios({
         
             method: 'DELETE',
