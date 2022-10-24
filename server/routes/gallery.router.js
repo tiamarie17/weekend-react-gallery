@@ -76,4 +76,31 @@ router.get('/', (req, res) => {
         })
 })
 
+
+//DELETE route
+
+router.delete('/:id', (req, res) => {
+
+    const galleryId = req.params.id;
+    console.log('galleryId is', galleryId);
+
+// Delete from database by giving id
+    const sqlText = `DELETE FROM "images"
+                        WHERE  "id" = $1;`;
+
+    const sqlParams = [galleryId];
+
+    pool.query(sqlText, sqlParams)
+        .then((response) => {
+            console.log('successfully deleted image!', response);
+            res.sendStatus(200);
+        })
+        .catch((err) => {
+            console.log('error in DELETE router', err);
+            res.sendStatus(500);
+        });
+});
+
+
+
 module.exports = router;
