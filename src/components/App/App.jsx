@@ -3,6 +3,7 @@ import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import GalleryList from '../GalleryList/GalleryList';
 import Header from '../Header/Header';
+import GalleryForm from '../GalleryForm/GalleryForm';
 
 function App() {
 
@@ -50,6 +51,30 @@ function App() {
 
         
     }
+
+    //POST request to send input from form to database
+
+    const addImage = (newImage) => {
+
+      axios({
+
+          method: 'POST',
+          url: '/gallery',
+          data: newImage
+
+      })
+          .then((response) => {
+              console.log('POST response from server', response.data);
+
+              getItems();
+          })
+          .catch((err) => {
+              console.log('POST error from server', err);
+
+          })
+  }
+
+
 
     //PUT request to update the number of likes on an image
     const updateLikes = (id) => {
