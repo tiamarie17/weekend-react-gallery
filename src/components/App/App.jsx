@@ -95,6 +95,27 @@ function App() {
   }
 
 
+  //DELETE request to delete an image when clicked on using its id
+
+      const deleteImage = (id) => {
+        axios({
+        
+            method: 'DELETE',
+            url: `/gallery/${id}`
+            
+        })
+            .then((response) => {
+                console.log('Image deleted', response);
+
+                getGallery()
+            })
+            .catch((err) => {
+                console.log('Error in delete', err);
+
+            })
+    }
+
+
 
     return (
       <div className="App">
