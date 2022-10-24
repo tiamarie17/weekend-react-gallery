@@ -17,7 +17,7 @@ router.put('/like/:id', (req, res) => {
     SET "likes" = "likes" + 1
     WHERE "id" = $1;`;
 
-    pool.query(sqlText, [itemId])
+    pool.query(sqlText, [galleryId])
         .then((dbRes) => {
 
             res.sendStatus(200);
