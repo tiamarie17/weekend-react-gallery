@@ -100,7 +100,7 @@ function App() {
       const deleteImage = (id) => {
           console.log('in deleteImage');
 
-          //Sweetalert
+          //Sweetalert on delete
           swal({
             title: "Are you sure?",
             text: "Once deleted, you will not be able to recover this image!",
