@@ -23,8 +23,10 @@ function GalleryItem({image, loveItBtn, active, handleChangeActive, deleteBtn}){
    
             <div className = "flex-box">
             <img onClick = {() => handleChangeActive(id)} src = {image.path} />
+            <div className = "imageButtons">
             <button className="likeBtn" onClick={() => loveItBtn(id)} >Like <img className = "heart" src="/images/heart.png"/></button>
             <button className = "deleteBtn" onClick={()=> deleteBtn(id)} type="click">Remove <img className="deleteIcon" src="images/delete.png"/></button>
+            </div>
             
             {likes === 1 ? (
                  <>
