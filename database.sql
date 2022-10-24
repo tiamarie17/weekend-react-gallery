@@ -3,7 +3,7 @@ CREATE TABLE "images" (
 	"id" SERIAL PRIMARY KEY,
 	"path" VARCHAR(250) NOT NULL,
 	"description" VARCHAR (500) NOT NULL,
-	"likes" INT 
+	"likes" INT DEFAULT 0
 	);
     
 INSERT INTO "images" ("path", "description", "likes")
