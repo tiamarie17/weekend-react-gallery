@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
 //Create input form for gallery
-function GalleryForm() {
+function GalleryForm({addImage}) {
 
 //State variables and functions
 const [newDescription, setNewDescription]  = useState('');

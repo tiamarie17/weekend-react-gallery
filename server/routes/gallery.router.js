@@ -2,6 +2,33 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool');
 
+//POST Route
+router.post('/', (req, res) => {
+
+    console.log('in POST route, req.body is', req.body);
+    
+    let newImage = req.body;
+    
+
+// INSERT input into the database
+    let sqlText = `INSERT INTO "images" ("description", "path")
+                    VALUES ($1, $2);`;
+
+    
+
+    pool.query(sqlText, [newImage.description, newImage.path])
+        .then((result) => {
+            console.log(`added newImage to the database`, newImage);
+
+            res.sendStatus(201);
+        })
+        .catch((error) => {
+            console.log(`error adding item to the database`, error);
+
+            res.sendStatus(500);
+        })
+})
+
 
 
 // PUT Route

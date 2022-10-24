@@ -66,7 +66,7 @@ function App() {
           .then((response) => {
               console.log('POST response from server', response.data);
 
-              getItems();
+              getGallery();
           })
           .catch((err) => {
               console.log('POST error from server', err);
@@ -99,6 +99,7 @@ function App() {
     return (
       <div className="App">
         <Header />
+        <GalleryForm addImage = {addImage}/>
         <GalleryList galleryList = {galleryList} updateLikes = {updateLikes} active={active} handleChangeActive={handleChangeActive}/>
       </div>
     );
